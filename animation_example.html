@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+.moving-text {
+justify-content: center;
+font-size: 30px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+animation: move-text 2s infinite ;
+}
+@keyframes move-text {
+0% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(50%);
+        }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+</style>      
+<div class="moving-text">Рухаючийся текст</div>
+<style>
+    .color-change {
+    width: 1920px;
+    border: 1px solid red;
+    animation: change-color 2s infinite;
+    height: 40px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 30PX;
+    JUSTIFY-CONTENT: center;
+    display: flex;
+    animation: change-color 2s infinite;
+    transition-duration: 2s;
+    }
+    @keyframes change-color {
+    0% {
+        background-color: red;
+      }
+    50% {
+        background-color: green;
+      }
+    100% {
+        background-color: blue;
+    }
+}
+</style>
+<div class="color-change">Зміна кольору фону</div>
+<br>
+<style>
+.menu {
+justify-content: center;
+font-size: 30px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    animation: show-menu 4s forwards infinite;
+    }
+    @keyframes show-menu {
+    0%{
+    transform: translate(0px);
+        }
+    50% {
+    transform: translateX(200px);
+    }
+    100%{
+    transform: translate(0px);
+    }
+}
+</style>  
+<div class="menu">Виїзд меню</div>
+<br>
+<style>
+    .rotate-image {
+    width: 400px;
+    height: 350px;
+    background-image: url('krutoi3.jpg');
+    background-size: cover;
+    animation: rotate 2s infinite;
+    position: relative;
+    left: 33%;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  
+  <div class="rotate-image"></div>
+  <button class="pulse-button">Натисни мене</button>
+
+  <style>
+    .pulse-button {
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+</style>
+</body>
+</html>
